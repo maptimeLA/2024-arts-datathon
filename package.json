@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "data": "curl -fsSL -o src/data/civic-art-data.csv https://docs.google.com/spreadsheets/d/1fuezLU1ky1wmOzXpJUnPEbgpMTu3jyDx/export?format=csv&usp=sharing&gid=821131278",
+    "build": "npm run data && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

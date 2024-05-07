@@ -28,7 +28,9 @@ function createMarkers(data) {
 
     data.forEach(item => {
         let marker = L.marker([item.Latitude, item.Longitude]);
+        console.log(item)
         marker.addTo(markerLayer);
+        marker.bindPopup(`<b>${item["Title"]}</b><br>By: ${item.ArtistName}<br>Medium: ${item.Medium}<br><br>${item["Location Name"]}<br>${item.AddressStreet}<br>${item.AddressCity}`).openPopup();
     });
     map.addLayer(markerLayer);
 }

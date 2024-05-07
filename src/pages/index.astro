@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { Image } from 'astro:assets';
+import coverImage  from '../images/cover.png'
 ---
 
 <html lang="en">
@@ -38,6 +40,7 @@ import "../styles/global.css";
   <body>
     <div id="credit">
       <div id="title">
+		<img class="image" src={coverImage.src} alt="A bird sitting on a nest of eggs.">
         <p class="headline">2024 Arts Datathon</p>
         <p class="secondary mb-4">LACOUNTY CIVIC ART COLLECTION</p>
       </div>
@@ -52,7 +55,7 @@ import "../styles/global.css";
         Registrar
       </p>
       <p>
-        <a href="https://www.meetup.com/maptimela/"
+        <a href="https://www.meetup.com/maptimela/" target="_blank"
           >Made by Nina Kin and Omar Ureta of MaptimeLA</a
         >
       </p>
@@ -67,6 +70,9 @@ import "../styles/global.css";
 </html>
 
 <style>
+	.image {
+		width: 25%;
+	}
   body {
     font-family: "Comfortaa", sans-serif;
   }

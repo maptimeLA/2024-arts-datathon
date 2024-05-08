@@ -33,14 +33,11 @@ body {
     user-select: none;
 }
 
-#credit {
-    pointer-events: none;
-}
-
 #title {
     bottom: 4em;
     pointer-events: none;
     user-select: none;
+    padding-left: 1em;
 }
 
 .headline {
@@ -55,13 +52,18 @@ body {
     margin-top: 0;
 }
 
-#credit {
+#description {
     font-size: 1em;
     position: absolute;
     bottom: 0;
     color: #284f9f;
     width: 100%;
     z-index: 3;
+    pointer-events: none;
+}
+
+#credit {
+    padding-left: 1em;
 }
 
 #credit a:link {

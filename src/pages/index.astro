@@ -1,13 +1,17 @@
 ---
 import "../styles/global.css";
-import { Image } from 'astro:assets';
-import coverImage  from '../images/cover.png'
+import { Image } from "astro:assets";
+import coverImage from "../images/cover.png";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/2024-arts-datathon/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/2024-arts-datathon/favicon.svg"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>2024 Arts Datathon - A Civic Art Mapathon</title>
@@ -40,16 +44,22 @@ import coverImage  from '../images/cover.png'
   <body>
     <div id="credit">
       <div id="title">
-		<img class="image" src={coverImage.src} alt="A bird sitting on a nest of eggs.">
+        <img
+          class="image"
+          src={coverImage.src}
+          alt="A bird sitting on a nest of eggs."
+        />
         <p class="headline">2024 Arts Datathon</p>
         <p class="secondary mb-4">LA COUNTY CIVIC ART COLLECTION</p>
       </div>
-      <p>
-        Data from the LA County Department of Arts and Culture.
-      </p>
+      <p>Data from the LA County Department of Arts and Culture.</p>
       <p>
         <a href="https://www.meetup.com/maptimela/" target="_blank">
-          Made by Nina Kin and Omar Ureta of <em><a href="https://www.meetup.com/maptimela/" target="_blank">MaptimeLA</a></em>.
+          Made by Nina Kin and Omar Ureta of <em
+            ><a href="https://www.meetup.com/maptimela/" target="_blank"
+              >MaptimeLA</a
+            ></em
+          >.
         </a>
       </p>
     </div>
@@ -61,4 +71,3 @@ import coverImage  from '../images/cover.png'
     </script>
   </body>
 </html>
-

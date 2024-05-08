@@ -35,15 +35,21 @@ function parseCSV(file) {
     });
 }
 
-function createMarkerLayer(data, icon) {
+function createMarkerLayer(data, icon, zIndexOffset = 0) {
     let markerLayer = L.layerGroup();
 
     data.forEach(item => {
         let marker = L.marker([item.Latitude, item.Longitude], {icon: icon});
-
+        
+        if (zIndexOffset > 0) {
+            marker.setZIndexOffset(zIndexOffset);
+        }
+        
         marker.addTo(markerLayer);
         marker.bindPopup(`<b>${item["Title"]}</b><br>By: ${item.ArtistName}<br>Medium: ${item.Medium}<br><br>${item["Location Name"]}<br>${item.AddressStreet}<br>${item.AddressCity}`).openPopup();
     });
+
+
     map.addLayer(markerLayer);
 }
 
@@ -60,6 +66,6 @@ Promise.all([parseCSV(ART_DATA)])
         });
         
         createMarkerLayer(unfinishedArtworks, mapIconOutline);
-        createMarkerLayer(finishedArtworks, mapIconSolid);
+        createMarkerLayer(finishedArtworks, mapIconSolid, 10000);
     })
     .catch(err => console.error(err));

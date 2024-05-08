@@ -7,7 +7,7 @@ import coverImage  from '../images/cover.png'
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>2024 Arts Datathon - A Civic Art Mapathon</title>
@@ -42,22 +42,15 @@ import coverImage  from '../images/cover.png'
       <div id="title">
 		<img class="image" src={coverImage.src} alt="A bird sitting on a nest of eggs.">
         <p class="headline">2024 Arts Datathon</p>
-        <p class="secondary mb-4">LACOUNTY CIVIC ART COLLECTION</p>
+        <p class="secondary mb-4">LA COUNTY CIVIC ART COLLECTION</p>
       </div>
-      <!-- <p>
-        <a
-          href="https://www.arcgis.com/home/item.html?id=0aaf09f081ee44eb98b1e6e886b5f515"
-          >Data from LA County - Storm Drain System</a
-        >
-      </p> -->
       <p>
-        Data from the LA County Department of Arts and Culture, Civic Art
-        Registrar
+        Data from the LA County Department of Arts and Culture.
       </p>
       <p>
-        <a href="https://www.meetup.com/maptimela/" target="_blank"
-          >Made by Nina Kin and Omar Ureta of MaptimeLA</a
-        >
+        <a href="https://www.meetup.com/maptimela/" target="_blank">
+          Made by Nina Kin and Omar Ureta of <em><a href="https://www.meetup.com/maptimela/" target="_blank">MaptimeLA</a></em>.
+        </a>
       </p>
     </div>
     <div id="overlay"></div>
@@ -69,66 +62,3 @@ import coverImage  from '../images/cover.png'
   </body>
 </html>
 
-<style>
-	.image {
-		width: 25%;
-	}
-  body {
-    font-family: "Comfortaa", sans-serif;
-  }
-  #overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-	background-color: #b4cdf8;
-	mix-blend-mode: color;
-	pointer-events: none;
-    user-select: none;
-
-  }
-
-  #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 0;
-  }
-  #title {
-    position: absolute;
-    bottom: 4em;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .headline {
-    font-size: 6em !important;
-    line-height: 1 !important;
-    margin: 0;
-  }
-
-  .secondary {
-    font-size: 2em !important;
-    line-height: 1 !important;
-    margin-top: 0;
-  }
-
-  #credit {
-    font-size: 1em;
-    position: absolute;
-    bottom: 0;
-    color: #284f9f;
-    width: 100%;
-    z-index: 3;
-  }
-
-  #credit a:link {
-    color: #284f9f;
-  }
-
-  #credit a:visited {
-    color: #284f9f;
-  }
-</style>
